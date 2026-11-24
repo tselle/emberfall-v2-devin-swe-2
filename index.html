@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emberfall — The Emberwild Saga</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ TITLE ============ -->
+<div id="title" class="screen">
+  <canvas id="titleFx"></canvas>
+  <div class="title-inner">
+    <h1 class="game-title">Emberfall</h1>
+    <div class="game-sub">The Emberwild Saga</div>
+    <div class="title-menu">
+      <button id="btnNew">New Game</button>
+      <button id="btnContinue">Continue</button>
+      <button id="btnLoad">Load Game</button>
+      <button id="btnHelpTitle">How to Play</button>
+    </div>
+    <div id="titleMeta" class="title-meta"></div>
+  </div>
+</div>
+
+<!-- ============ CAMPAIGN CHOOSER ============ -->
+<div id="campaign" class="screen hidden">
+  <h2>Choose an Adventure</h2>
+  <div id="campaignTabs"></div>
+  <div id="campaignCards"></div>
+  <div class="screen-actions">
+    <button id="btnCampBack">Back</button>
+    <button id="btnAssemble" class="primary">Assemble the Company</button>
+  </div>
+</div>
+
+<!-- ============ ASSEMBLY ============ -->
+<div id="assembly" class="screen hidden">
+  <h2 id="asmTitle">Assemble Your Company</h2>
+  <div id="asmBody" class="asm-cols">
+    <div class="asm-col">
+      <h3>Waiting</h3>
+      <div id="asmWaiting"></div>
+    </div>
+    <div class="asm-col">
+      <h3>Company <span id="asmCount"></span></h3>
+      <div id="asmParty"></div>
+      <div class="asm-mid">
+        <button id="btnAdd">Add &gt;</button>
+        <button id="btnRemove">&lt; Remove</button>
+        <button id="btnUp">Up</button>
+        <button id="btnDown">Down</button>
+      </div>
+      <div id="asmFunds"></div>
+      <button id="btnNewHero">Create Hero</button>
+      <button id="btnDelHero">Delete Selected</button>
+    </div>
+  </div>
+  <div id="asmIntro" class="asm-intro"></div>
+  <div class="screen-actions">
+    <button id="btnAsmBack">Back</button>
+    <button id="btnBegin" class="primary">Begin the Adventure</button>
+  </div>
+</div>
+
+<!-- ============ GAME ============ -->
+<div id="game" class="screen hidden">
+  <div id="hud">
+    <button id="hudParty" title="Party (P)">&#9829; Party</button>
+    <span id="hudLoc" class="hud-loc"></span>
+    <span id="hudAhead" class="hud-ahead"></span>
+    <span class="hud-right">
+      <span id="hudTime"></span>
+      <span id="hudGold"></span>
+    </span>
+  </div>
+  <div id="stage">
+    <canvas id="view3d"></canvas>
+    <canvas id="overCanvas" class="hidden"></canvas>
+    <canvas id="combatCanvas" class="hidden"></canvas>
+    <div id="navpadHost"></div>
+  </div>
+  <div id="bottombar">
+    <div id="cmdbar"></div>
+    <div id="cmdhint"></div>
+    <div id="log"></div>
+    <canvas id="minimap" width="500" height="420"></canvas>
+  </div>
+</div>
+
+<!-- ============ PARTY DRAWER ============ -->
+<div id="party" class="drawer hidden">
+  <div class="drawer-head">
+    <span>Company</span>
+    <button id="partyClose" title="Close (P)">&#10005;</button>
+  </div>
+  <div id="partyList"></div>
+</div>
+
+<!-- ============ MODAL STACK ============ -->
+<div id="modalRoot"></div>
+
+<!-- ============ TOUCH / SCRIPT ============ -->
+<script src="js/rules.js"></script>
+<script src="js/data.js"></script>
+<script src="js/modules.js"></script>
+<script src="js/monsters.js"></script>
+<script src="js/wilds.js"></script>
+<script src="js/treasure.js"></script>
+<script src="js/adventures.js"></script>
+<script src="js/figures.js"></script>
+<script src="js/view3d.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/overland.js"></script>
+<script src="js/campaign.js"></script>
+<script src="js/journal.js"></script>
+<script src="js/map.js"></script>
+<script src="js/bestiary.js"></script>
+<script src="js/navpad.js"></script>
+<script src="js/watch.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
